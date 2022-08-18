@@ -6,25 +6,7 @@
         <description>Recent content in Posts on Example Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 14 Aug 2022 16:24:05 +0800</lastBuildDate><atom:link href="https://liangleilei123.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Third</title>
-        <link>https://liangleilei123.github.io/p/third/</link>
-        <pubDate>Sun, 14 Aug 2022 16:24:05 +0800</pubDate>
-        
-        <guid>https://liangleilei123.github.io/p/third/</guid>
-        <description>&lt;p&gt;测试最终章，修改config.yaml中main下面的url后网站显示正确。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Second</title>
-        <link>https://liangleilei123.github.io/p/second/</link>
-        <pubDate>Sun, 14 Aug 2022 15:56:02 +0800</pubDate>
-        
-        <guid>https://liangleilei123.github.io/p/second/</guid>
-        <description>&lt;p&gt;测试文件第二个，到底是怎么上传博客啊&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Sat, 06 Aug 2022 16:49:55 +0800</lastBuildDate><atom:link href="https://liangleilei123.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>First</title>
         <link>https://liangleilei123.github.io/p/first/</link>
         <pubDate>Sat, 06 Aug 2022 16:49:55 +0800</pubDate>
