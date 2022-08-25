@@ -6,7 +6,71 @@
         <description>Recent content in Posts on Example Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 06 Aug 2022 16:49:55 +0800</lastBuildDate><atom:link href="https://liangleilei123.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 25 Aug 2022 15:55:36 +0800</lastBuildDate><atom:link href="https://liangleilei123.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>用Typroa软件编写的Markdown文档上传到github图片显示问题</title>
+        <link>https://liangleilei123.github.io/p/%E7%94%A8typroa%E8%BD%AF%E4%BB%B6%E7%BC%96%E5%86%99%E7%9A%84markdown%E6%96%87%E6%A1%A3%E4%B8%8A%E4%BC%A0%E5%88%B0github%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</link>
+        <pubDate>Thu, 25 Aug 2022 15:55:36 +0800</pubDate>
+        
+        <guid>https://liangleilei123.github.io/p/%E7%94%A8typroa%E8%BD%AF%E4%BB%B6%E7%BC%96%E5%86%99%E7%9A%84markdown%E6%96%87%E6%A1%A3%E4%B8%8A%E4%BC%A0%E5%88%B0github%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</guid>
+        <description>&lt;h2 id=&#34;用typora软件编写的markdown文件上传到github图片丢失问题&#34;&gt;用Typora软件编写的Markdown文件上传到github图片丢失问题&lt;/h2&gt;
+&lt;p&gt;Typora是一个很不错的Markdown编辑器。但是在笔记中添加图片相对麻烦。特别是没有设置图片的默认存储路径时，移动md文件或者上传到github上会造成图片丢失。今天在把一个笔记上传到github上时，突然发现&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;img src=&amp;quot; &amp;quot;&lt;/code&gt;路径格式的图片没有丢失，探索之后发现这是一个好的方法，但是在操作过程中会增加一点工作量。具体操作如下：&lt;/p&gt;
+&lt;h3 id=&#34;把文件存储路径改为相对路径&#34;&gt;把文件存储路径改为相对路径&lt;/h3&gt;
+&lt;p&gt;因为Markdown文件时纯文本文件，因此所以用户无法在 Markdown 文件中直接插入图片文件，而是通过在 Markdown 文件中引用文件路径或者 URL 的方式插入图片，所以默认情况下，Typora 会先将文件保存到一个固定的目录，具体什么目录跟操作系统有关。这里先随便截个图插入到当前文档：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://liangleilei123.github.io/typora_note.assets/image-20220818180018215-16614005980711.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220818180018215-16614005980711&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;点击图片可以发现该图片默认存放在&lt;code&gt;C:\Users\HP\AppData\Roaming\Typora\typora-user-images\image-20220818180018215.png&lt;/code&gt;下。当你在本机内移动该本md文档时，图片还是能正常显示，因为并没有改变文档的位置。但是当你把本文档分享给别人或者上传到自己的github上时，图片无法显示，因为图片是在你自己的电脑上保存着，别人的电脑上没有也就无法显示。&lt;/p&gt;
+&lt;p&gt;这时，我们可以把保存图片的路径改为相对路径。在Typora中，文件&amp;mdash;&amp;ndash;&amp;gt;偏好设置&amp;mdash;&amp;ndash;&amp;gt;图像。按下图箭头指示修改。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://liangleilei123.github.io/typora_note.assets/image-20220818181610709.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220818181610709&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;修改完成后当向Typora中插入图片时Typora会自动在该md文件当前目录下新建一个 &lt;code&gt;  当前文件名.asset&lt;/code&gt;文件夹，用来存放插入该文档的图片。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://liangleilei123.github.io/typora_note.assets/image-20220818182553316.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220818182553316&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;插入图片的路径就变成了 &lt;code&gt;Typora_note.assets/image-20220818181610709.png&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这时在分享该文档时可以把md文件和存放图片的文件夹打包成一个文件，注意保持相对路径正确，也就是md文件和   .asset文件夹要保持在同一级目录下。如果只是单纯的分享给别人看，在文件&amp;mdash;-&amp;gt;导出&amp;mdash;-&amp;gt;PDF更方便。&lt;/p&gt;
+&lt;h3 id=&#34;上传到gitbub的图片设置&#34;&gt;上传到Gitbub的图片设置&lt;/h3&gt;
+&lt;p&gt;关于图片显示的问题，有些图片上传到Github上就无法显示。先参考这个方法，&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/sunyctf/article/details/124112909&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;(2条消息) 如何解决上传到github上的图片显示不出来的问题_儒雅的烤地瓜的博客-CSDN博客_github显示不了图片&lt;/a&gt;可以解决图片显示问题。&lt;/p&gt;
+&lt;p&gt;如果电脑连接了外网，使用了相对路径后，把md文档和保存图片的文件夹都上传到github，图片就可以实时浏览了。&lt;/p&gt;
+&lt;p&gt;网上有很多用服务器或者插件上传到图集的方法，可以不用外网实现图片的实时浏览，我觉得太麻烦了。今天偶然间发现一个可以弯道超车的方法——缩放图片。&lt;/p&gt;
+&lt;p&gt;插入图片后点击图片右键选择缩放图片，选择任意尺寸，缩放完成后发现图片的路径变成了HTML格式，这种格式上传到Github上是可以实时浏览的。关于在哪设置图片的路径自动转换成HTML格式的方法，还没找到。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://liangleilei123.github.io/typora_note.assets/image-20220825120404392.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220825120404392&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>First</title>
         <link>https://liangleilei123.github.io/p/first/</link>
         <pubDate>Sat, 06 Aug 2022 16:49:55 +0800</pubDate>
